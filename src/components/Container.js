@@ -9,17 +9,15 @@ import Map from './Map';
 
 function Container() {
     return (
-        <div className="container">
-            <Router>
-                <Header/>
-                <div className="section">
-                    <CovidStats/>
-                    <Graphs/>
-                    <Map/>
-                    <CovidTable/>
-                </div>
-            </Router>
-        </div>
+        <Router>
+            <Header/>
+            <div className="section">
+                <CovidStats/>
+                <Graphs/>
+                <Map/>
+                <CovidTable/>
+            </div>
+        </Router>
     )
 }
 

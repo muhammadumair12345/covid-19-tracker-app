@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import covidlogo from '../images/covidlogo.png';
 import {IconButton, MenuItem, Select, Tooltip } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkedAlt,faChartBar,faTable } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkedAlt,faChartBar,faTable,faVirus } from '@fortawesome/free-solid-svg-icons';
 import { CovidDataContext } from '../context/CovidDataContext';
 
 function Header() {
@@ -32,6 +32,13 @@ function Header() {
                 </Select>
             </div>
             <div className="navigation">
+                <HashLink smooth to='#stats' className="link">
+                    <Tooltip title="Card Stats">
+                        <IconButton aria-label="show-stats" color="inherit">
+                        <FontAwesomeIcon icon={faVirus} /> 
+                    </IconButton>
+                    </Tooltip>
+                </HashLink>     
                 <HashLink smooth to='#graph' className="link">
                     <Tooltip title="Chart">
                         <IconButton aria-label="show-chart" color="inherit">

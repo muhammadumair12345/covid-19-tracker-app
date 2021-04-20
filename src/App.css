@@ -3,13 +3,6 @@
   box-sizing: border-box;
 }
 
-/* Container */
-
-.container {
-  min-height: 100vh;
-  color: white;
-}
-
 /* Header */
 
 .header {
@@ -19,6 +12,7 @@
   padding: 5px;
   background-color: rgb(165 0 0);
   position: sticky;
+  color: white;
   top: 0;
   z-index: 1;
 }
@@ -54,11 +48,8 @@
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 25px;
-  position: relative;
-  z-index: -1;
 }
 
 /* Covid Stats */
@@ -116,7 +107,9 @@
 /* Map */
 
 .map {
-  height: 500px;
+  height: 450px;
+  position: relative;
+  z-index: 0;
 }
 
 .info-container {

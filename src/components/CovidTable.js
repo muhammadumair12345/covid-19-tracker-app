@@ -27,6 +27,8 @@ const StyledTableCell = withStyles((theme) => ({
     const useStyles = makeStyles({
     table: {
         minWidth: 700,
+        position:'relative',
+        zIndex:0
     },
     });
 
@@ -61,7 +63,7 @@ const StyledTableCell = withStyles((theme) => ({
                     <StyledTableCell align="right">Total Critical</StyledTableCell>
                 </TableRow>
                 </TableHead>
-                <TableBody >
+                <TableBody>
                 {tableData.map(({country,
                         todayCases,
                         todayRecovered,
