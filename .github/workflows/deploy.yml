@@ -1,13 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy React App to Surge
+name: Deploy Surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -38,4 +36,4 @@ jobs:
       run: npm install --global surge
 
     - name: Deploy to Surge
-      run: surge ./build umair-expense-tracker.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build umair-covid19-tracker.surge.sh --token ${{ secrets.SURGE_TOKEN }}
