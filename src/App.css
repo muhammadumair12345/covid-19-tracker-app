@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+
+.container {
+  min-height: 100vh;
+  color: white;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(165 0 0);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.title {
+  flex: 3;
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.select {
+  flex: 1;
+}
+
+.country-select {
+  height: 32px;
+  min-width: 230px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.link {
+  color: white;
+}
+
+/* Section */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+  z-index: -1;
+}
+
+/* Covid Stats */
+
+.covid-stats {
+  display: flex;
+  width: 650px;
+  margin-bottom: 25px;
+}
+
+/* Info Card */
+
+.info-card {
+  flex: 1;
+}
+
+.info-card:nth-of-type(even) {
+  margin: 0px 10px 0px 10px;
+}
+
+.info-card-title,
+.info-card-total,
+.info-card-today {
+  font-family: "Comfortaa", cursive !important;
+  font-size: 16px !important;
+}
+
+.info-card-total {
+  color: #3d4737 !important;
+  font-size: 2rem !important;
+}
+
+/* Graphs Container, Map Container, Table Container */
+
+.graphs-container,
+.map-container,
+.table-container {
+  width: 900px;
+  padding: 20px;
+}
+
+.bar-graph-title,
+.line-graph-title,
+.map-title,
+.table-title {
+  margin-bottom: 25px !important;
+}
+
+/* Map Container */
+
+.map-container {
+  margin: 25px 0px 25px 0px;
+}
+
+/* Map */
+
+.map {
+  height: 500px;
+}
+
+.info-container {
+  width: 150px;
+}
+
+.info-image {
+  width: 100%;
+  height: 80px;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.info-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+.info-cases,
+.info-recovered,
+.info-deaths {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 650px) {
+  .header {
+    flex-direction: column;
+  }
+  .select {
+    order: 3;
+  }
+  .covid-stats {
+    flex-direction: column;
+    width: 100%;
+  }
+  .info-card:nth-of-type(even) {
+    margin: 10px 0px 10px 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .graphs-container,
+  .map-container,
+  .table-container {
+    width: 100%;
+  }
+}

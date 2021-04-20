@@ -1,11 +1,13 @@
 import React from 'react';
+import Container from './components/Container';
+import { CovidDataProvider } from './context/CovidDataContext';
 
 function App() {
   return (
-    <div>
-      <h1>Covid 19 Tracker App</h1>
-    </div>
-  );
+    <CovidDataProvider>
+      <Container/>
+    </CovidDataProvider>
+  )
 }
 
-export default App;
+export default App
