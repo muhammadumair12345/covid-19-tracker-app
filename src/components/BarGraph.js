@@ -9,21 +9,20 @@ function BarGraph() {
     const [barGraphData,setBarGraphData]=useState({});
     const {countryInfo}=useContext(CovidDataContext);  
 
-    const chart=()=>{
-        setBarGraphData({
-            labels:["Total Cases","Recoveries","Deaths"],
-            datasets: [
-              {
-                data: [countryInfo.cases,countryInfo.recovered,countryInfo.deaths],
-                backgroundColor: ["#f09819","#56ab2f","rgb(165 0 0)"],
-              },
-            ],
-          });
-    }
-
     useEffect(() => {
+        const chart=()=>{
+            setBarGraphData({
+                labels:["Total Cases","Recoveries","Deaths"],
+                datasets: [
+                  {
+                    data: [countryInfo.cases,countryInfo.recovered,countryInfo.deaths],
+                    backgroundColor: ["#f09819","#56ab2f","rgb(165 0 0)"],
+                  },
+                ],
+              });
+        }
         chart()
-    }, [countryInfo])
+    },[countryInfo])
 
     return (
         <div>

@@ -18,9 +18,12 @@ export const CovidDataProvider=({children})=>{
     const fetchCountries=useFetchData("https://disease.sh/v3/covid-19/countries");
 
     useEffect(() => {
-        fetch("https://disease.sh/v3/covid-19/all").
-        then(response=>response.json()).
-        then(data=>setCountryInfo(data))
+        const fetchAll=async ()=>{
+            const response=await fetch("https://disease.sh/v3/covid-19/all");
+            const data=await response.json();
+            setCountryInfo(data);
+        }
+        fetchAll();
       }, [])  
 
     useEffect(() => {

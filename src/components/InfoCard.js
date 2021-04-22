@@ -4,15 +4,15 @@ import {CovidDataContext} from '../context/CovidDataContext'
 
 const casesTypeColors={
     "Active Cases":{
-        background: "#f09819",
+        backgroundColor: "#f09819",
         background: "linear-gradient(180deg,#edde5d,#f09819)",
     },
     "Recoveries":{
-        background: "#56ab2f",
+        backgroundColor: "#56ab2f",
         background: "linear-gradient(180deg, #a8e063, #56ab2f)",
     },
     "Deaths":{
-        background: "rgb(165 0 0)",
+        backgroundColor: "rgb(165 0 0)",
         background: "linear-gradient(180deg,#e68d6d,rgb(165 0 0))",   
     }
 }
